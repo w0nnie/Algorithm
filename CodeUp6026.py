@@ -1,0 +1,5 @@
+w1= input()
+w2= input()
+w1 = float(w1)
+w2 = float(w2)
+print(w1+w2)
