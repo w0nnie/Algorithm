@@ -1,5 +1,5 @@
-a,b,c = map(int,input().split())
-d = 1
-while d%a!=0 or d%b!=0 or d%c!=0:
-    d +=1
-print(d)
+a,m,d,n = map(int,input().split())
+sum = a
+for i in range(1, n):
+    sum = sum * m + d
+print(sum)
