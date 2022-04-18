@@ -9,9 +9,16 @@
 def solve():
   n = int(input())
   a = []
-  for i in range(n):
-    quiz = list(map(int,input))
-
-
-
+  for _ in range(n):
+    a = list(input())
+    jumsu = 0  #입력을 받을때마다 초기화가 되어야 하기에 for 문 안에서 선언
+    sum = 0
+    for i in a:
+      if i == 'O':
+        jumsu +=1
+        sum += jumsu
+      else:
+            jumsu = 0
+    print(sum)
+      
 solve()
