@@ -6,9 +6,10 @@ def solve():
   for _ in range(c):
     avg = 0
     count = 0
+    answer = 0
     jumsu = list(map(int,input().split()))
     avg = (sum(jumsu) - jumsu[0]) / jumsu[0]
-    for i in jumsu:
+    for i in jumsu[1:]:
       if i > avg:
         count += 1
         answer = count / jumsu[0] * 100
