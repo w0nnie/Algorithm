@@ -5,16 +5,29 @@
 # n을 d(n)의 생성자라고 한다. 위의 수열에서 33은 39의 생성자이고, 39는 51의 생성자, 51은 57의 생성자이다. 생성자가 한 개보다 많은 경우도 있다. 예를 들어, 101은 생성자가 2개(91과 100) 있다. 
 # 생성자가 없는 숫자를 셀프 넘버라고 한다. 100보다 작은 셀프 넘버는 총 13개가 있다. 1, 3, 5, 7, 9, 20, 31, 42, 53, 64, 75, 86, 97
 # 10000보다 작거나 같은 셀프 넘버를 한 줄에 하나씩 출력하는 프로그램을 작성하시오.
-def d(n):
-  sum = n
-  x = [int(a) for a in str(n)] #한자리씩 떨어트려 list에 넣어줌
-  for i in x:
-    sum += i
-  return(sum)
 
+# def d(n):
+#   sum = n
+#   b = []
+#   x = [int(a) for a in str(n)] #한자리씩 떨어트려 list에 넣어줌
+#   for i in x:
+#     sum += i
+#   return(sum)
 
-d(3451)
+# d(3451)
 
+def solve():
+    arr = list(range(1,10001)) #1~10000까지의 모든 수
+    list = []  #셀프넘버인 수를 담을 []
+    for i in arr:
+        for n in str(i):
+            i += int(n)
+        if i <= 10000:
+            list.append(i)
+    for a in set(list):
+        arr.remove(a)
+    for j in arr:
+        print(j)
 
-
-
+solve()
+#다시봐야할것같다 아직 문제를 완벽히 이해하지못했다.
