@@ -14,6 +14,7 @@ def solve():
         s, l = map(int,input().split())
         arr.append([s,l])
     arr = sorted(arr[0])
+    arr = sorted(arr[1])
     print(arr)
 
     
