@@ -10,12 +10,18 @@
 def solve():
     n = int(input())
     arr = []
-    for i in range(n):
+    for _ in range(n):
         s, l = map(int,input().split())
         arr.append([s,l])
-    arr = sorted(arr[0])
-    arr = sorted(arr[1])
-    print(arr)
+    arr= sorted(arr,key = lambda x : x[0])
+    arr= sorted(arr,key = lambda x : x[1])
+    last = 0
+    cnt = 0
+    for i,j in arr:
+        print(i,j)
+        if i>=last:
+            cnt += 1
+            last = j
+    print(cnt)
 
-    
 solve()
